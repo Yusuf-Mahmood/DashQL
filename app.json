@@ -10,10 +10,8 @@
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#ffffff"
-      }
+   "android": {
+      "package": "com.dashql.mobile"
     },
     "web": {
       "bundler": "metro",
