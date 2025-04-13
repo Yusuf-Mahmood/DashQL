@@ -11,7 +11,6 @@ import tw from 'twrnc';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
-  withTiming,
 } from 'react-native-reanimated';
 import { loginUser, fetchProfileData } from '../services/auth';
 import { useRouter } from 'expo-router';
