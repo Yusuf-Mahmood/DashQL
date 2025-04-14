@@ -1,4 +1,4 @@
-import { Transaction } from '@/app/dashboard.types';
+import { Transaction } from '@/types/dashboard.types';
 
 export const calculateProjects = (transactions: Transaction[]) => {
   return transactions

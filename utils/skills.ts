@@ -1,4 +1,4 @@
-import { Transaction } from '@/app/dashboard.types';
+import { Transaction } from '@/types/dashboard.types';
 
 const skillsList = [
   'skill_git', 'skill_algo', 'skill_tcp', 'skill_unix', 'skill_ai',

@@ -3,7 +3,7 @@ import tw from 'twrnc';
 import { colors } from '@/constants/colors';
 import { HeaderProps } from './header.types';
 import { useAuth } from '@/context/authContext';
-import { LogOut } from 'lucide-react-native'; 
+import { AlignLeft, LogOut } from 'lucide-react-native'; 
 
 const Header: React.FC<HeaderProps> = ({ firstName, level, login, email, audits }) => {
   const { logout } = useAuth();
@@ -16,7 +16,11 @@ const Header: React.FC<HeaderProps> = ({ firstName, level, login, email, audits 
           style={tw`p-2 absolute mt-[-2.5]`}
           hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
         >
-          <LogOut color={colors.textSecondary} size={23} />
+          <LogOut 
+            color={colors.textSecondary} 
+            size={23} 
+            style={{ transform: [{ rotate: '180deg' }] }} 
+          />
         </TouchableOpacity>
         <Text style={[
           tw`text-2xl font-bold flex-1 text-center ml-18`, 

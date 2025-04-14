@@ -6,7 +6,7 @@ import Header from '@/components/Dashboard/header';
 import AuditRatioGauge from '@/components/Dashboard/Charts/auditRatio';
 import ProjectGauge from '@/components/Dashboard/Charts/projectGauge';
 import SkillsList from '@/components/Dashboard/Charts/skillsList';
-import { User } from '@/app/dashboard.types';
+import { User } from '@/types/dashboard.types';
 import { getSkills, getMaxSkillAmount } from '@/utils/skills';
 import { calculateProjects } from '@/utils/projects';
 
