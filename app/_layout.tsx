@@ -1,5 +1,5 @@
 import { Slot } from 'expo-router';
-import { AuthProvider } from '../context/authContext';
+import { AuthProvider } from '@/context/authContext';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
 import tw from 'twrnc';

@@ -1,4 +1,4 @@
-import { USER_QUERY } from "../graphql/queries";
+import { USER_QUERY } from "@/graphql/queries";
 
 export const loginUser = async (identifier: string, password: string): Promise<string | null> => {
   const encodedCredentials = btoa(`${identifier.trim()}:${password.trim()}`);
@@ -37,10 +37,8 @@ export const fetchProfileData = async (token: string): Promise<any> => {
       body: JSON.stringify(USER_QUERY),
     });
     const json = await response.json();
-    console.log("Response:", json);
     return json?.data?.user || null;
   } catch (err) {
-    console.log("here");
     return null;
   }
 };

@@ -1,21 +1,22 @@
 import { createContext, useState, ReactNode, useContext } from 'react';
-
-// Define the type for the context values
-type AuthContextType = {
-  token: string | null;
-  setToken: (token: string) => void;
-  data: any;
-  setData: (data: any) => void;
-};
+import { AuthContextType } from './authContext.types';
+import { useRouter } from 'expo-router';
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [token, setToken] = useState<string | null>(null);
   const [data, setData] = useState<any>(null);
+  const router = useRouter();
+
+  const logout = () => {
+    setToken(null);
+    setData(null);
+    router.replace('/');
+  };
 
   return (
-    <AuthContext.Provider value={{ token, setToken, data, setData }}>
+    <AuthContext.Provider value={{ token, setToken, data, setData, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -3,7 +3,7 @@ import tw from 'twrnc';
 
 const EmailInput = ({ value, onChangeText, hasError }: any) => (
   <TextInput
-    placeholder="Email"
+    placeholder="Username or Email"
     placeholderTextColor="#999"
     keyboardType="email-address"
     value={value}

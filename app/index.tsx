@@ -12,13 +12,13 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import { loginUser, fetchProfileData } from '../services/auth';
+import { loginUser, fetchProfileData } from '@/services/auth';
 import { useRouter } from 'expo-router';
-import { useAuth } from '../context/authContext';
-import EmailInput from '../components/Auth/emailInput';
-import PasswordInput from '../components/Auth/passwordInput';
-import SubmitButton from '../components/Auth/submitButton';
-import { colors } from '../constants/colors';  // Import colors
+import { useAuth } from '@/context/authContext';
+import EmailInput from '@/components/Auth/emailInput';
+import PasswordInput from '@/components/Auth/passwordInput';
+import SubmitButton from '@/components/Auth/submitButton';
+import { colors } from '@/constants/colors'; 
 
 const { height } = Dimensions.get('window');
 
@@ -38,8 +38,6 @@ const Login = () => {
       setError('Invalid credentials');
       return;
     }
-    console.log('Login successful, token:', token);
-
     setToken(token);
     const profileData = await fetchProfileData(token);
     if (!profileData) {
