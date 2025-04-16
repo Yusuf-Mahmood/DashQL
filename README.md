@@ -3,8 +3,8 @@
 **DashQL** is a cross-platform mobile dashboard application built with **React Native**, **Expo**, and **GraphQL**, designed to visualize user activity, skills, and audit data in a clean, interactive UI.
 
 <p align="center">
-  <img src="login.png" width="300"/>
-  <img src="dashboard.png" width="300"/>
+  <img src="assets/images/login.png" width="300"/>
+  <img src="assets/images/dashboard.png" width="300"/>
 </p>
 
 ---
