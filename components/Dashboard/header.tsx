@@ -1,13 +1,19 @@
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import tw from 'twrnc';
 import { colors } from '@/constants/colors';
-import { HeaderProps } from './header.types';
 import { useAuth } from '@/context/authContext';
-import { AlignLeft, LogOut } from 'lucide-react-native'; 
+import { LogOut } from 'lucide-react-native'; 
+
+export type HeaderProps = {
+  firstName: string;
+  level: string | number;
+  login: string;
+  email: string;
+  audits: number;
+}
 
 const Header: React.FC<HeaderProps> = ({ firstName, level, login, email, audits }) => {
   const { logout } = useAuth();
-
   return (
     <View style={tw`mb-6`}>
       <View style={tw`flex-row`}>
@@ -23,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ firstName, level, login, email, audits 
           />
         </TouchableOpacity>
         <Text style={[
-          tw`text-2xl font-bold flex-1 text-center ml-18`, 
+          tw`text-xl font-bold flex-1 text-center ml-18`, 
           { color: colors.textPrimary }
         ]}>
           {firstName}'s Dashboard

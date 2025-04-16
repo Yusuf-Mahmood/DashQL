@@ -16,7 +16,7 @@ import EmailInput from '@/components/Auth/emailInput';
 import PasswordInput from '@/components/Auth/passwordInput';
 import SubmitButton from '@/components/Auth/submitButton';
 import { colors } from '@/constants/colors'; 
-import { useLogin } from '@/hooks/useLogin';
+import { useLogin } from '@/context/authContext';
 
 const { height } = Dimensions.get('window');
 

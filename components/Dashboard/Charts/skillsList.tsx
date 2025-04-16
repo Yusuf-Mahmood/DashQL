@@ -2,7 +2,17 @@ import { View, Text, ScrollView } from 'react-native';
 import Svg, { Rect, Defs, LinearGradient, Stop } from 'react-native-svg';
 import tw from 'twrnc';
 import { colors } from '@/constants/colors';
-import { SkillsListProps } from './skillsList.types';
+
+export type Skill = {
+  name: string;
+  amount: number;
+  key: string;
+}
+
+export type SkillsListProps = {
+  skills: Skill[];
+  maxAmount: number;
+}
 
 const SkillsList: React.FC<SkillsListProps> = ({ skills, maxAmount }) => {
   return (
@@ -10,7 +20,7 @@ const SkillsList: React.FC<SkillsListProps> = ({ skills, maxAmount }) => {
       <Text style={[tw`text-center text-lg font-bold mb-2`, { color: colors.textPrimary }]}>
         Highest Skills
       </Text>
-      <View style={tw`h-64 ml-2`}>
+      <View style={tw`h-65 ml-2`}>
         <ScrollView style={tw`pr-3`}>
           {skills.map((skill) => (
             <View key={skill.key} style={tw`mb-3`}>

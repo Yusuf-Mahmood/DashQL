@@ -28,7 +28,7 @@ const Dashboard: React.FC = () => {
   const maxAuditSize = Math.max(user?.totalDown || 0, user?.totalUp || 0);
 
   return (
-    <View style={tw`flex-1 bg-[${colors.primaryBackground}] mt-10`}>
+    <View style={tw`flex-1 bg-[${colors.primaryBackground}] mt-5`}>
       <ScrollView contentContainerStyle={tw`p-4`}>
         <Header
           firstName={user.firstName}

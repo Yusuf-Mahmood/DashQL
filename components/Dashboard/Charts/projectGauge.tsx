@@ -2,8 +2,13 @@ import { View, Text } from 'react-native';
 import Svg, { Circle, Path, G, Text as SvgText, Defs, LinearGradient, Stop, Line } from 'react-native-svg';
 import tw from 'twrnc';
 import { colors } from '@/constants/colors';
-import { ProjectGaugeProps } from './projectGauge.types';
 
+export type ProjectGaugeProps = {
+  projects: {
+    name: string;
+    amount: number;
+  }[];
+}
 const ProjectGauge: React.FC<ProjectGaugeProps> = ({ projects }) => {
   return (
     <View style={tw`items-center`}>

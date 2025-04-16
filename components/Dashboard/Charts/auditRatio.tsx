@@ -2,8 +2,13 @@ import { View, Text } from 'react-native';
 import Svg, { Rect, Defs, LinearGradient, Stop, Text as SvgText } from 'react-native-svg';
 import tw from 'twrnc';
 import { colors } from '@/constants/colors';
-import { AuditRatioProps } from './auditRatio.types';
 import { formatSize } from '@/utils/formatSize';
+
+export type AuditRatioProps = {
+  totalDown: number;
+  totalUp: number;
+  maxAuditSize: number;
+}
 
 const AuditRatioGauge: React.FC<AuditRatioProps> = ({ totalDown, totalUp, maxAuditSize }) => {
   const auditScale = maxAuditSize > 0 ? maxAuditSize : 1000000;
